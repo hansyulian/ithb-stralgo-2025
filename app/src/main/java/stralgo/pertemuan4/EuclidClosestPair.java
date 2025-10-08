@@ -74,6 +74,8 @@ public class EuclidClosestPair {
     double r = closestPair == null ? Double.MAX_VALUE : closestPair.distance;
     // get the x median
     double xMedian = getXMedian(left, right);
+    // alternative: use one of the center point as median
+    // double xMedian = points.get(mid).x;
     // + 1 in case the the mid is not even within the boundary, also ensure not
     // breaking the right boundary
     int leftMergeBoundary = Math.min(mid + 1, right);
