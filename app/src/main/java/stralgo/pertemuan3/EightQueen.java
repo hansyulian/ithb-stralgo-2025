@@ -60,7 +60,14 @@ public class EightQueen {
   public void printOne() {
     build8Queen(0);
     for (int i = 0; i < this.columns.length; i++) {
-      System.out.println((i + 1) + " - " + (this.columns[i] + 1));
+      for (int j = 0; j < this.columns.length; j++) {
+        if (this.columns[i] == j) {
+          System.out.print("* ");
+        } else {
+          System.out.print("- ");
+        }
+      }
+      System.out.println();
     }
   }
 
